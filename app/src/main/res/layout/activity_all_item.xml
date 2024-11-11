@@ -1,0 +1,50 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Imagem do Dragão (quadrado menor) -->
+    <ImageView
+        android:id="@+id/dragonImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="Dragon image"
+        android:background="#CCCCCC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Texto Título -->
+    <TextView
+        android:id="@+id/tvLinhaA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:maxLines="1"
+        android:text="Titulo"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dragonImage"
+        app:layout_constraintTop_toTopOf="@id/dragonImage" />
+
+    <!-- Texto Descrição -->
+    <TextView
+        android:id="@+id/tvLinhaB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="3"
+        android:text="Descrição do jogo"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tvLinhaA"
+        app:layout_constraintTop_toBottomOf="@id/tvLinhaA"
+        app:layout_constraintEnd_toEndOf="@id/tvLinhaA" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
